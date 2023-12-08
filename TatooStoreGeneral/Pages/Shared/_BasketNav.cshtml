@@ -1,0 +1,9 @@
+﻿@using TatooStore.Models.ViewModels
+@model BasketVM
+
+@if (Model.TotalCost > 0) {
+    <p>Корзина: @Model.TotalCost &#8381</p>
+} else 
+{
+    <p>Корзина пуста!</p>
+}

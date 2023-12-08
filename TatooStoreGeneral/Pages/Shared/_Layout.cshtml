@@ -1,0 +1,135 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using TatooStore.Services.Repository.AccountRepository;
+@using TatooStore.Services.Repository;
+@using Microsoft.AspNetCore.Http;
+@using TatooStore.Models.DataModels;
+@using TatooStore.Models;
+@using TatooStore.Models.ViewModels;
+@inject SignInManager<AppUser> _signInManager;
+@inject UserManager<AppUser> _userManager;
+@inject IAccountRepository _account;
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TATOO STORE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TatooStoreGeneral.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/f1db69634b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">TATOO STORE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" style=@(ViewData["NavNumber"] == "0" ? "color: red" : "color: black") asp-area="" asp-page="/Index">Каталог</a>
+                        </li>
+                        @if (_signInManager.IsSignedIn(User))
+                        {
+                            @if (_userManager.IsInRoleAsync(_userManager.FindByNameAsync(User.Identity.Name).GetAwaiter().GetResult(), RoleList.adminRole).GetAwaiter().GetResult())
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" style=@(ViewData["NavNumber"] == "1" ? "color: red" : "color: black") asp-area="" asp-page="/EmployeePages/EmployeesList/EmployeesList">Сотрудники</a>
+                                </li>
+                            }
+                            @if (_userManager.IsInRoleAsync(_userManager.FindByNameAsync(User.Identity.Name).GetAwaiter().GetResult(), RoleList.employeeRole).GetAwaiter().GetResult())
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" style=@(ViewData["NavNumber"] == "2" ? "color: red" : "color: black") asp-area="" asp-page="/EmployeePages/GoodsEdit/GoodsList">Товары</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style=@(ViewData["NavNumber"] == "3" ? "color: red" : "color: black") asp-area="" asp-page="/EmployeePages/OrdersList/OrdersList">Заказы</a>
+                                </li>
+                            }
+                            @if (_userManager.IsInRoleAsync(_userManager.FindByNameAsync(User.Identity.Name).GetAwaiter().GetResult(), RoleList.customerRole).GetAwaiter().GetResult())
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" style=@(ViewData["NavNumber"] == "5" ? "color: red" : "color: black") asp-area="" asp-page="/CustomerPages/AboutUs">О нас</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <ul class="navbar-nav d-flex justify-content-end">
+                        <li class="nav-item">
+                            @if (Context.Session.Keys.Contains("basket"))
+                            {   
+                                <a href="/Basket" id="basketNav" class="text-decoration-none" style="color: blue; font-size: 14pt"><i class="fa-solid fa-basket-shopping"></i> @(Context.Session.Get<BasketVM>("basket").TotalCost) &#8381</a>
+                                <a hidden id="basketNavEmpty">Корзина пуста</a>
+                            } else
+                            {
+                                <a id="basketNavEmpty">Корзина пуста</a>
+                                <a hidden href="/Basket" id="basketNav" class="text-decoration-none" style="color: blue; font-size: 14pt"><i class="fa-solid fa-basket-shopping"></i>&#8381</a>
+                            }
+                        </li>
+                    </ul>
+                    @if (_signInManager.IsSignedIn(User))
+                    {
+                        <ul class="navbar-nav d-flex justify-content-end">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @_account.GetNameUserMenu(User.Identity.Name)
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @if (!_userManager.IsInRoleAsync(_userManager.FindByNameAsync(User.Identity.Name).GetAwaiter().GetResult(), RoleList.employeeRole).GetAwaiter().GetResult())
+                                    {
+                                        <li><a class="dropdown-item" href="/CustomerPages/PurchaseHistory">История заказов</a></li>
+                                    }
+                                    else
+                                    {
+                                        @if (_userManager.IsInRoleAsync(_userManager.FindByNameAsync(User.Identity.Name).GetAwaiter().GetResult(), RoleList.adminRole).GetAwaiter().GetResult())
+                                        {
+                                            <li class="text-center">Администратор</li>
+                                        }
+                                        else
+                                        {
+                                            <li class="text-center">Сотрудник</li>
+                                        }
+                                    }
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li class="text-center"><a class="btn btn-primary" asp-area="" asp-page="/Account/Logout">Выход</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    }  else
+                    {
+                        <ul class="navbar-nav d-flex justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="btn btn-primary" asp-area="" asp-page="/Account/Login">Вход</a>
+                                <a class="btn" style=@(ViewData["NavNumber"] == "4" ? "color: red" : "color: black") asp-area="" asp-page="/Account/Registration/CustomerRegistration">Регистрация</a>
+                            </li>
+                        </ul>
+                    }       
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - GERMAN TOKMININ
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

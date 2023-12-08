@@ -1,0 +1,60 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.EmployeesList.EmployeeEditModel
+@{
+    ViewData["NavNumber"] = "1";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-10 col-md-8 col-lg-4">
+            <h3 class="mb-3">Редактирование информации о сотруднике</h3>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.FirstName">Имя</lable>
+                    <input type="text" asp-for="Employee.FirstName" class="form-control" />
+                    <span asp-validation-for="Employee.FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.User.MiddleName">Отчество</lable>
+                    <input type="text" asp-for="Employee.MiddleName" class="form-control" />
+                    <span asp-validation-for="Employee.MiddleName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.LastName">Фамилия</lable>
+                    <input type="text" asp-for="Employee.LastName" class="form-control" />
+                    <span asp-validation-for="Employee.LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.PassportNumber">Серия и номер паспорта</lable>
+                    <input type="text" asp-for="Employee.PassportNumber" class="form-control" />
+                    <span asp-validation-for="Employee.PassportNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.PhoneNumber">Номер телефона</lable>
+                    <input type="text" asp-for="Employee.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="Employee.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.Email">Email</lable>
+                    <input type="text" asp-for="Employee.Email" class="form-control" />
+                    <span asp-validation-for="Employee.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.Password">Пароль</lable>
+                    <input type="password" asp-for="Employee.Password" class="form-control" />
+                    <span asp-validation-for="Employee.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Employee.ConfirmPassword">Подтвердите пароль</lable>
+                    <input type="password" asp-for="Employee.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="Employee.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success" asp-page-handler="Update" asp-route-id="@Model.ID">Сохранить изменение</button>
+                    <a class="btn btn-light" href="/EmployeePages/EmployeesList/EmployeesList">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

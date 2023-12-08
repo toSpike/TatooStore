@@ -1,0 +1,76 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.GoodsEdit.GoodsListModel
+@{
+    ViewData["NavNumber"] = "2";
+}
+
+<div class="modal fade" id="modalSupply" tabindex="-1" aria-bs-labelledby="modalSupplyLable" aria-bs-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSupplyLable">Добавить поставку товара:</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-bs-lable="close"></button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <lable class="form-lable">Количество товара</lable>
+                        <input name="goodCount" type="number" value="1" min="1" class="form-control"/>
+                        <input name="goodId" type="hidden" id="goodId" />
+                    </div> 
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" asp-page-handler="AddSupply" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-start align-items-center">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <a href="Create/GoodsCreate" class="btn btn-success">Создать товар</a>
+            <a href="Create/CategoriesCreate" class="btn btn-success">Создать категорию</a>
+            <a href="Create/ManufacturesCreate" class="btn btn-success">Создать производителя</a>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 400px">Наименование товара</th>
+                        <th scope="col" style ="width: 100px">Количество</th>
+                        <th scope="col" style ="width: 150px">Цена</th>
+                        <th scope="col" style ="width: 250px">Производитель</th>
+                        <th scope="col" style ="width: 250px">Категория</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Goods)
+                    {
+                        <tr class="table-light">
+                            <td>@item.GoodName</td>
+                            <td class="text-center">@item.GoodCount</td>
+                            <td class="text-center">@item.PriceChanges[0].NewPrice</td>
+                            <td>@item.Manufacture.ManufactureName</td>
+                            <td>@item.Category.CategoryName</td>
+                            <td>
+                                <form method="post">
+                                    <a href="/EmployeePages/GoodsEdit/GoodEdit?id=@item.GoodId" class="btn btn-primary">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSupply" onclick="AddSupplyClick(@item.GoodId, '@item.GoodName')">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </button>                                         
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

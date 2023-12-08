@@ -1,0 +1,59 @@
+﻿@page
+@model TatooStoreGeneral.Pages.Account.Registration.EmployeeRegistrationModel
+@{
+    ViewData["NavNumber"] = "1";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-10 col-md-8 col-lg-4">
+            <h1 class="mb-3">Регистрация</h1>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.FirstName">Имя</lable>
+                    <input type="text" asp-for="Model.FirstName" class="form-control" />
+                    <span asp-validation-for="Model.FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.MiddleName">Отчество</lable>
+                    <input type="text" asp-for="Model.MiddleName" class="form-control" />
+                    <span asp-validation-for="Model.MiddleName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.LastName">Фамилия</lable>
+                    <input type="text" asp-for="Model.LastName" class="form-control" />
+                    <span asp-validation-for="Model.LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.PassportNumber">Серия и номер паспорта</lable>
+                    <input type="text" asp-for="Model.PassportNumber" class="form-control" />
+                    <span asp-validation-for="Model.PassportNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.PhoneNumber">Номер телефона</lable>
+                    <input type="text" asp-for="Model.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="Model.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.Email">Email</lable>
+                    <input type="text" asp-for="Model.Email" class="form-control" />
+                    <span asp-validation-for="Model.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.Password">Пароль</lable>
+                    <input type="password" asp-for="Model.Password" class="form-control" />
+                    <span asp-validation-for="Model.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-label" asp-for="Model.ConfirmPassword">Подтвердите пароль</lable>
+                    <input type="password" asp-for="Model.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="Model.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Зарегистрировать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

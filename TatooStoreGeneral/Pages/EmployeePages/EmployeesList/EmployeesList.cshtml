@@ -1,0 +1,67 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.EmployeesList.EmployeesListModel
+@using Microsoft.AspNetCore.Identity;
+@using TatooStore.Models.DataModels;
+@using TatooStore.Models;
+@inject UserManager<AppUser> _userManager;
+@{
+    ViewData["NavNumber"] = "1";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 160px">Фамилия</th>
+                        <th scope="col" style ="width: 160px">Имя</th>
+                        <th scope="col" style ="width: 160px">Отчество</th>
+                        <th scope="col" style ="width: 180px">Принят на работу</th>
+                        <th scope="col" style ="width: 150px">Паспорт</th>
+                        <th scope="col" style ="width: 100px">Телефон</th>
+                        <th scope="col" style ="width: 200px">Email</th>
+                        <th scope="col">
+                            <a href="/Account/Registration/EmployeeRegistration" class="btn btn-success">Добавить</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.employee)
+                    {
+                        <tr class="@(item.User.IsActiveUser ? "table-light" : "table-danger")">
+                            <td>@item.User.LastName</td>
+                            <td>@item.User.FirstName</td>
+                            <td>@item.User.MiddleName</td>
+                            <td class="text-center">@item.DateOfEmployment.ToShortDateString()</td>
+                            <td class="text-center">@item.PassportNumber</td>
+                            <td class="text-center">@item.User.PhoneNumber</td>
+                            <td class="text-center">@item.User.Email</td>
+                            <td class="text-center">
+                                <form method="post">
+                                    @if (item.User.IsActiveUser)
+                                    {
+                                        <a href="/EmployeePages/EmployeesList/EmployeeEdit?id=@item.UserId" class="btn btn-primary">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        @if (!_userManager.IsInRoleAsync(item.User, RoleList.adminRole).GetAwaiter().GetResult())
+                                        {
+                                            <button class="btn btn-danger" asp-page-handler="DeleteEmployee" asp-route-id="@item.UserId">
+                                                <i class="fa-regular fa-trash-can"></i>
+                                            </button>
+                                        } else
+                                        {
+                                            <a class="btn btn-primary" style="opacity: 0; cursor: default">
+                                                <i class="fa-regular fa-pen-to-square"></i>
+                                            </a>
+                                        }
+                                    }
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

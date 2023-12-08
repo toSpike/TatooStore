@@ -1,0 +1,103 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.OrdersList.OrderListItemModel
+@{
+    ViewData["NavNumber"] = "3";
+}
+
+
+<h3>Заказ #@Model.OrderListItem.PurchaseId</h3>
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12"> 
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 100px">Id покупателя</th>
+                        <th scope="col" style ="width: 250px">Фамилия</th>
+                        <th scope="col" style ="width: 250px">Имя</th>
+                        <th scope="col" style ="width: 250px">Отчество</th>
+                        <th scope="col" style ="width: 250px">Номер телефона</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light text-center">
+                        <th>@Model.OrderListItem.CustomerId</th>
+                        <th>@Model.OrderListItem.CustomerLastName</th>
+                        <th>@Model.OrderListItem.CustomerFirstName</th>
+                        <th>@Model.OrderListItem.CustomerMiddleName</th>
+                        <th>@Model.OrderListItem.PhoneNumber</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12"> 
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 100px">Id покупки</th>
+                        <th scope="col" style ="width: 200px">Дата</th>
+                        <th scope="col" style ="width: 300px">Адрес</th>
+                        <th scope="col" style ="width: 200px">Стоимость</th>
+                        <th scope="col" style ="width: 300px">Статус заказа</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <th class="text-center">@Model.OrderListItem.PurchaseId</th>
+                        <th class="text-center">@Model.OrderListItem.PurchaseDate</th>
+                        <th>@Model.OrderListItem.DeliveryAddress</th>
+                        <th class="text-center">@Model.OrderListItem.TotalCost</th>
+                        <th class="text-center">@(Model.OrderListItem.EmployeeId == null ? "Активный" : "Завершен, Сотрудник #" + Model.OrderListItem.EmployeeId)</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12"> 
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 100px">Id товара</th>
+                        <th scope="col" style ="width: 400px">Наименование товара</th>
+                        <th scope="col" style ="width: 150px">Цена</th>
+                        <th scope="col" style ="width: 100px">Количество</th>
+                        <th scope="col" style ="width: 150px">Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderListItem.OrderItems)
+                    {
+                        <tr class="table-light">
+                            <td class="text-center">@item.GoodId</td>
+                            <td>@item.GoodName</td>
+                            <td class="text-center">@item.GoodPrice</td>
+                            <td class="text-center">@item.GoodCount</td>
+                            <td class="text-center">@(item.GoodPrice * item.GoodCount)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12"> 
+            @if (Model.OrderListItem.EmployeeId == null){
+                <form method="post">
+                    <input type="hidden" name="purchaseId" value="@Model.OrderListItem.PurchaseId" />
+                    <button class="btn btn-success" type="submit">
+                        Принять заказ
+                    </button>
+                    <a href="/EmployeePages/OrdersList/OrdersList" class="btn btn-secondary">Назад</a>
+                </form>
+            } else {
+                <form>
+                    <a href="/EmployeePages/OrdersList/OrdersList" class="btn btn-secondary">Назад</a>
+                </form>
+            }
+            
+        </div>
+    </div>
+</div>

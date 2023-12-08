@@ -1,0 +1,31 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.GoodsEdit.Create.CategoriesCreateModel
+@{
+    ViewData["NavNumber"] = "2";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <h2 class="mb-3">Создание категории</h2>
+            
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Category.CategoryName">Наименование категории</lable>
+                    <input type="text" class="form-control" asp-for="Category.CategoryName"/>
+                    <span asp-validation-for="Category.CategoryName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable">Изображение</lable>
+                    <input type="file" class="form-control" name="uploadedImage"/>
+                    <span class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Создать категорию</button>
+                    <a class="btn btn-light" href="/EmployeePages/GoodsEdit/GoodsList">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

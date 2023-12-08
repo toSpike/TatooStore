@@ -1,0 +1,59 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.GoodsEdit.Create.GoodsCreateModel
+@{
+    ViewData["NavNumber"] = "2";
+}
+
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <h2 class="mb-3">Создание товара</h2>
+            
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Good.GoodName">Наименование товара</lable>
+                    <input type="text" class="form-control" asp-for="Good.GoodName"/>
+                    <span asp-validation-for="Good.GoodName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Good.GoodDescription">Описание товара</lable>
+                    <textarea class="form-control" asp-for="Good.GoodDescription"></textarea>
+                    <span asp-validation-for="Good.GoodDescription" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Supply.GoodCount">Количество товара</lable>
+                    <input type="number" min="0" class="form-control" asp-for="Supply.GoodCount"/>
+                    <span asp-validation-for="Supply.GoodCount" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="PriceChange.NewPrice">Цена товара</lable>
+                    <input type="number" step="0.01" min="0" class="form-control" asp-for="PriceChange.NewPrice"/>
+                    <span asp-validation-for="PriceChange.NewPrice" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Good.CategoryId">Категория</lable>
+                    <select class="form-control" asp-for="Good.CategoryId" size="5" asp-items="Model.CategoriesSl">
+                    </select>
+                    <span asp-validation-for="Good.CategoryId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Good.ManufactureId">Производитель</lable>
+                    <select class="form-control" asp-for="Good.ManufactureId" size="5" asp-items="Model.ManufacturesSl">
+                    </select>
+                    <span asp-validation-for="Good.ManufactureId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable">Изображение</lable>
+                    <input type="file" class="form-control" name="uploadedImage"/>
+                    <span class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Создать товар</button>
+                    <a class="btn btn-light" href="/EmployeePages/GoodsEdit/GoodsList">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

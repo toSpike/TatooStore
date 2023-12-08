@@ -1,0 +1,120 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TatooStoreGeneral
+build_property.RootNamespace = TatooStoreGeneral
+build_property.ProjectDir = D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStoreGeneral\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStoreGeneral
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Account/Registration/CustomerRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3RyYXRpb25cQ3VzdG9tZXJSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Account/Registration/EmployeeRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3RyYXRpb25cRW1wbG95ZWVSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Basket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFza2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Catalog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/CustomerPages/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlc1xBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/CustomerPages/PurchaseHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlc1xQdXJjaGFzZUhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/EmployeesList/EmployeeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xFbXBsb3llZXNMaXN0XEVtcGxveWVlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/EmployeesList/EmployeesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xFbXBsb3llZXNMaXN0XEVtcGxveWVlc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/GoodsEdit/Create/CategoriesCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xHb29kc0VkaXRcQ3JlYXRlXENhdGVnb3JpZXNDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/GoodsEdit/Create/GoodsCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xHb29kc0VkaXRcQ3JlYXRlXEdvb2RzQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/GoodsEdit/Create/ManufacturesCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xHb29kc0VkaXRcQ3JlYXRlXE1hbnVmYWN0dXJlc0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/GoodsEdit/GoodEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xHb29kc0VkaXRcR29vZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/GoodsEdit/GoodsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xHb29kc0VkaXRcR29vZHNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/OrdersList/OrderListItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xPcmRlcnNMaXN0XE9yZGVyTGlzdEl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/EmployeePages/OrdersList/OrdersList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYWdlc1xPcmRlcnNMaXN0XE9yZGVyc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Shared/_ErrorCountItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9FcnJvckNvdW50SXRlbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/4 курс 2 семестр/ВКР/\!МОЯ ВКР/_Final_TatooStore/TatooStore/TatooStoreGeneral/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-whu45h8rw2

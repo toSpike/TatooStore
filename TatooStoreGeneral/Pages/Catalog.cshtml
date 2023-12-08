@@ -1,0 +1,47 @@
+﻿@page
+@model TatooStoreGeneral.Pages.CatalogModel
+@{
+    ViewData["NavNumber"] = "0";
+}
+
+<h2 class="mb-3">@Model.Category.CategoryName</h2> 
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        @foreach (var item in Model.Goods)
+        {
+            <div class="col-sm-12 col-lg-9 col-xl-8">
+                <div class="card-deck">
+                    <div class="card m-3">
+                        <div class="container g-0">
+                            <div class="row g-0 justify-content-around align-items-start">
+                                <div class="col-4">
+                                    <img class="img-fluid m-2 mx-lg-auto d-block img-thumbnail" src="@(item.GoodImagePath!=null?item.GoodImagePath:"/Files/noPhoto.jpg")" />
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@item.GoodName</h5>
+                                        <p class="card-text">@item.GoodDescription</p>
+                                        <p class="card-text"><small class="text-muted">Производитель: @item.Manufacture.ManufactureName</small></p>
+                                        <div class="container">
+                                            <div class="row justify-content-between align-items-center">
+                                                <div class="col">
+                                                    <p class="card-text"><small class="fw-bold" style="font-size: 14pt">Цена: @item.PriceChanges[0].NewPrice &#8381</small></p>
+                                                </div>
+                                                <div class="col d-flex justify-content-end">
+                                                    <form method="post">
+                                                    <button type="button" class="btn btn-primary float-right" onclick="AddToBasket(@item.GoodId)">Добавить в корзину</button> 
+                                                </form>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        }
+    </div>
+</div>
+

@@ -1,0 +1,31 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.GoodsEdit.Create.ManufacturesCreateModel
+@{
+    ViewData["NavNumber"] = "2";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <h2 class="mb-3">Создание производителя</h2>
+            
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Manufacture.ManufactureName">Наименование производителя</lable>
+                    <input type="text" class="form-control" asp-for="Manufacture.ManufactureName"/>
+                    <span asp-validation-for="Manufacture.ManufactureName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" asp-for="Manufacture.ManufactureDescription">Описание производителя</lable>
+                    <textarea class="form-control" rows="10" asp-for="Manufacture.ManufactureDescription"></textarea>
+                    <span asp-validation-for="Manufacture.ManufactureDescription" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Создать производителя</button>
+                    <a class="btn btn-light" href="/EmployeePages/GoodsEdit/GoodsList">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

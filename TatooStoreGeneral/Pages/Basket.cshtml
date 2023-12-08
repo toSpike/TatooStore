@@ -1,0 +1,94 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@using TatooStore.Models.DataModels
+@using Microsoft.AspNetCore.Http;
+@using TatooStore.Models;
+@inject UserManager<AppUser> _userManager
+@model TatooStoreGeneral.Pages.BasketModel
+@{
+}
+
+<div class="modal fade" id="modalBasket" tabindex="-1" aria-bs-labelledby="modalBasketLable" aria-bs-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalBasketLable">На складе недостаточно товаров для заказа</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-bs-lable="close"></button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        
+                    </div> 
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" asp-page-handler="ChangeErrorsBasket" class="btn btn-primary">Принять</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-10">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 500px">Наименование товара</th>
+                        <th scope="col" style ="width: 200px">Цена</th>
+                        <th scope="col" style ="width: 100px">Количество товара</th>
+                        <th scope="col" style ="width: 200px">Стоимость</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Basket.Goods)
+                    {
+                        <tr id="@item.Id" class="table-light">
+                            <td>@item.Name</td>
+                            <td class="text-center">@item.Price &#8381</td>
+                            <td><input type="number" min="1" class="form-control" value="@item.Count" oninput="AddCountItemBasket(@item.Id)"/></td>
+                            <td class="text-center">@item.Cost &#8381</td>
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="id" value="@item.Id"/>
+                                    <button asp-page-handler="DeleteItem" type="submit" class="btn btn-danger">
+                                        <i class="fa-solid fa-circle-minus"></i>
+                                    </button>                                         
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="mb-3">
+                <lable class="form-lable">Адрес доставки</lable>
+                <textarea id="address" rows="2" class="form-control" ></textarea>
+            </div>
+            @if (Model._signInManager.IsSignedIn(User))
+            {
+                @if (!_userManager.IsInRoleAsync(_userManager.FindByNameAsync(User.Identity.Name).GetAwaiter().GetResult(), RoleList.employeeRole).GetAwaiter().GetResult())
+                {
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end"> 
+                    <!--<form method="post">-->
+                        <button class="btn btn-primary btn-lg" onClick="PlaceOrder()">
+                            Оформить заказ
+                        </button>
+                    <!--</form>-->
+                    </div>
+                }
+            } else
+            {
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end"> 
+                    <!--<form method="post">-->
+                        <button class="btn btn-secondary btn-lg" onClick="PlaceOrder()">
+                            Оформить заказ
+                        </button>
+                    <!--</form>-->
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>

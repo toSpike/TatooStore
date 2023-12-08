@@ -1,0 +1,17 @@
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\bin\Debug\net6.0\TatooStore.Services.deps.json
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\bin\Debug\net6.0\TatooStore.Services.runtimeconfig.json
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\bin\Debug\net6.0\TatooStore.Services.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\bin\Debug\net6.0\TatooStore.Services.pdb
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\bin\Debug\net6.0\TatooStore.Models.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\bin\Debug\net6.0\TatooStore.Models.pdb
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.csproj.AssemblyReference.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.AssemblyInfoInputs.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.AssemblyInfo.cs
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.csproj.CoreCompileInputs.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.csproj.CopyComplete
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\refint\TatooStore.Services.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.pdb
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\TatooStore.Services.genruntimeconfig.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Services\obj\Debug\net6.0\ref\TatooStore.Services.dll

@@ -1,0 +1,42 @@
+﻿@page
+@model TatooStoreGeneral.Pages.EmployeePages.OrdersList.OrdersListModel
+@{
+    ViewData["NavNumber"] = "3";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-10">
+            <h2>Заказы</h2>
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col" style ="width: 150px">Id заказа</th>
+                        <th scope="col" style ="width: 300px">Дата</th>
+                        <th scope="col" style ="width: 150px">Id покупателя</th>
+                        <th scope="col" style ="width: 250px">Стоимость</th>
+                        <th scope="col" style ="width: 200px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderList)
+                    {
+                        <tr class="@(item.EmployeeId == null ? "table-danger" : "table-light") text-center">
+                            <td>@item.PurchaseId</td>
+                            <td class="text-center">@item.PurchaseDate</td>
+                            <td class="text-center">@item.CustomerId</td>
+                            <td>@item.TotalCost</td>
+                            <td>
+                                <form method="post">
+                                    <a href="/EmployeePages/OrdersList/OrderListItem?purchaseId=@item.PurchaseId" class="btn btn-primary">
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </a>                                       
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

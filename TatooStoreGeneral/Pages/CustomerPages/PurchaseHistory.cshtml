@@ -1,0 +1,66 @@
+﻿@page
+@model TatooStoreGeneral.Pages.CustomerPages.PurchaseHistoryModel
+@{
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h2>Истории заказов</h2>
+            @foreach (var item in Model.PurchaseHistory.Purchases)
+            {
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <h5>Заказ #@item.PurchaseId</h5>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <p>Дата покупки:<br> @item.PurchaseDate</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <p>Адрес доставки:<br> @item.DeliveryAddress</p>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <p>Статус заказа:<br> @(item.Status?"Доставлено":"Обрабатывается")</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th scope="col" style ="width: 500px">Наименование товара</th>
+                                        <th scope="col" style ="width: 200px">Цена</th>
+                                        <th scope="col" style ="width: 100px">Количество</th>
+                                        <th scope="col" style ="width: 200px">Стоимость</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var itemPur in item.PurchaseItems)
+                                    {
+                                        <tr class="table-light">
+                                            <td>@itemPur.GoodName</td>
+                                            <td class="text-center">@itemPur.GoodPrice &#8381</td>
+                                            <td class="text-center">@itemPur.GoodCount</td>
+                                            <td class="text-center">@(itemPur.GoodPrice*@itemPur.GoodCount) &#8381</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-sm-12 col-md-12 col-lg-12 mb-3">
+                                    <h5>Итого: @item.TotalCost</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="dropdown-divider">
+                </div>
+            }
+        </div>
+    </div>
+</div>

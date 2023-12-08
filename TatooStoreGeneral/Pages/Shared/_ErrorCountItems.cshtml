@@ -1,0 +1,25 @@
+﻿@using TatooStore.Models.ViewModels
+@model ErrorCountItems
+
+<table class="table">
+    <thead>
+        <tr class="text-center">
+            <th scope="col" style ="width: 160px">Наименование товара</th>
+            <th scope="col" style ="width: 160px">Количество на складе</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Errors)
+        {
+            <tr class="table-light">
+                <td>@item.Name
+                    <input type="hidden" name="goods" value="@item.Id/@item.Count" />
+                </td>
+                <td style="align-items-center">@item.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

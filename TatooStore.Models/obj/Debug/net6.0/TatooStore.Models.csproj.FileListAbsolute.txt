@@ -1,0 +1,14 @@
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\bin\Debug\net6.0\TatooStore.Models.deps.json
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\bin\Debug\net6.0\TatooStore.Models.runtimeconfig.json
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\bin\Debug\net6.0\TatooStore.Models.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\bin\Debug\net6.0\TatooStore.Models.pdb
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.csproj.AssemblyReference.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.AssemblyInfoInputs.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.AssemblyInfo.cs
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.csproj.CoreCompileInputs.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\refint\TatooStore.Models.dll
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.pdb
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\TatooStore.Models.genruntimeconfig.cache
+D:\Учеба\4 курс 2 семестр\ВКР\!МОЯ ВКР\_Final_TatooStore\TatooStore\TatooStore.Models\obj\Debug\net6.0\ref\TatooStore.Models.dll

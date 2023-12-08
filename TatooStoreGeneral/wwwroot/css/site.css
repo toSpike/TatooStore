@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.myActive {
+    color: red;
+}
+
+.colorText {
+    color: #d65fcd;
+}
+
+.background {
+    background-color: #212529;
+    height: 250px;
+}
+
+.myMargin {
+    padding-top: 65px;
+    padding-left: 60px;
+    font-size: 11pt; /* Размер шрифта в пунктах */
+}
