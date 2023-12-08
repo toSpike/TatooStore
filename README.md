@@ -3,7 +3,7 @@
 ### Стек технологий
 - C#;
 - Razor Pages в ASP.NET Core;
-- ADO.NET Entity F++ramework (EF);
+- ADO.NET Entity Framework (EF);
 - Oracle SQL Developer Data Modeler;
 - SQL Server Management Studio (SSMS);
 - Microsoft Visual Studio;
